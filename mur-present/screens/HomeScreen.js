@@ -3,7 +3,6 @@ import {
   Image,
   ImageBackground,
   Platform,
-  SafeAreaView,
   ScrollView,
   StyleSheet,
   Text,
@@ -26,9 +25,11 @@ export default class HomeScreen extends React.Component {
 
           <View style={styles.getStartedContainer}>
             <ImageBackground source={require('../assets/images/murandry1.jpg')} style={{width: '100%', height: '100%', justifyContent: 'center'}}>
-              <Text style={styles.getStartedText}>
-                Hi babe :)
-              </Text>
+              <View style={styles.textContainer}>
+                <Text style={styles.getStartedText}>
+                  Happy Anniversary, love.
+                </Text>
+              </View>
             </ImageBackground>
           </View>
         </ScrollView>
@@ -113,9 +114,15 @@ const styles = StyleSheet.create({
     borderRadius: 3,
     paddingHorizontal: 4,
   },
+  textContainer: {
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
   getStartedText: {
     fontSize: 24,
     color: '#ffffff',
+    backgroundColor: '#dcd0ff',
+    padding: 10,
     lineHeight: 24,
     textAlign: 'center',
   },
