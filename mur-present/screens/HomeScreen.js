@@ -1,7 +1,9 @@
 import React from 'react';
 import {
   Image,
+  ImageBackground,
   Platform,
+  SafeAreaView,
   ScrollView,
   StyleSheet,
   Text,
@@ -23,10 +25,11 @@ export default class HomeScreen extends React.Component {
         <ScrollView style={styles.container} contentContainerStyle={styles.contentContainer}>
 
           <View style={styles.getStartedContainer}>
-
-            <Text style={styles.getStartedText}>
-              Hi babe :)
-            </Text>
+            <ImageBackground source={require('../assets/images/murandry1.jpg')} style={{width: '100%', height: '100%', justifyContent: 'center'}}>
+              <Text style={styles.getStartedText}>
+                Hi babe :)
+              </Text>
+            </ImageBackground>
           </View>
         </ScrollView>
       </View>
@@ -81,6 +84,8 @@ const styles = StyleSheet.create({
   },
   contentContainer: {
     paddingTop: 30,
+    justifyContent: 'center',
+    flex: 1,
   },
   welcomeContainer: {
     alignItems: 'center',
@@ -95,8 +100,7 @@ const styles = StyleSheet.create({
     marginLeft: -10,
   },
   getStartedContainer: {
-    alignItems: 'center',
-    marginHorizontal: 50,
+    justifyContent: 'center',
   },
   homeScreenFilename: {
     marginVertical: 7,
@@ -110,8 +114,8 @@ const styles = StyleSheet.create({
     paddingHorizontal: 4,
   },
   getStartedText: {
-    fontSize: 17,
-    color: 'rgba(96,100,109, 1)',
+    fontSize: 24,
+    color: '#ffffff',
     lineHeight: 24,
     textAlign: 'center',
   },
