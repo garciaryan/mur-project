@@ -24,13 +24,13 @@ export default class HomeScreen extends React.Component {
         <ScrollView style={styles.container} contentContainerStyle={styles.contentContainer}>
 
           <View style={styles.getStartedContainer}>
-            <ImageBackground source={require('../assets/images/murandry1.jpg')} style={{width: '100%', height: '100%', justifyContent: 'center'}}>
-              <View style={styles.textContainer}>
+            <ImageBackground source={require('../assets/images/murandry1.jpg')} style={{width: '100%', height: '100%', justifyContent: 'center', opacity: 0.5}}>
+            </ImageBackground>
+            <View style={styles.textContainer}>
                 <Text style={styles.getStartedText}>
                   Happy Anniversary, love.
                 </Text>
               </View>
-            </ImageBackground>
           </View>
         </ScrollView>
       </View>
@@ -74,7 +74,7 @@ export default class HomeScreen extends React.Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: 'rgba(0,0,0,.6)',
   },
   developmentModeText: {
     marginBottom: 20,
@@ -117,14 +117,16 @@ const styles = StyleSheet.create({
   textContainer: {
     justifyContent: 'center',
     alignItems: 'center',
+    position: 'absolute',
+    left: 50,
   },
   getStartedText: {
-    fontSize: 24,
-    color: '#ffffff',
-    backgroundColor: '#dcd0ff',
+    fontSize: 30,
+    color: 'rgba(255,255,255, 1)',
     padding: 10,
     lineHeight: 24,
     textAlign: 'center',
+    fontFamily: 'dancing-script'
   },
   tabBarInfoContainer: {
     position: 'absolute',
