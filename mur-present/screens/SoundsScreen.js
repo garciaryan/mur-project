@@ -4,7 +4,8 @@ import {
   ScrollView, 
   StyleSheet,
   View, 
-  Button 
+  TouchableOpacity,
+  Text 
 } from 'react-native';
 
 export default class SoundsScreen extends React.Component {
@@ -16,11 +17,55 @@ export default class SoundsScreen extends React.Component {
     return (
       <ScrollView style={styles.container}>
         <View style={styles.board}>
-          <Button 
+          <TouchableOpacity 
             style={styles.button}
-            title="Press Me!"
             onPress={this._makeSound}>
-          </Button>
+            <Text style={styles.btnText}>Press me!</Text>
+          </TouchableOpacity>
+          <TouchableOpacity 
+            style={styles.button}
+            onPress={this._makeSound}>
+            <Text style={styles.btnText}>Press me!</Text>
+          </TouchableOpacity>
+          <TouchableOpacity 
+            style={styles.button}
+            onPress={this._makeSound}>
+            <Text style={styles.btnText}>Press me!</Text>
+          </TouchableOpacity>
+        </View>
+        <View style={styles.board}>
+          <TouchableOpacity 
+            style={styles.button}
+            onPress={this._makeSound}>
+            <Text style={styles.btnText}>Press me!</Text>
+          </TouchableOpacity>
+          <TouchableOpacity 
+            style={styles.button}
+            onPress={this._makeSound}>
+            <Text style={styles.btnText}>Press me!</Text>
+          </TouchableOpacity>
+          <TouchableOpacity 
+            style={styles.button}
+            onPress={this._makeSound}>
+            <Text style={styles.btnText}>Press me!</Text>
+          </TouchableOpacity>
+        </View>
+        <View style={styles.board}>
+          <TouchableOpacity 
+            style={styles.button}
+            onPress={this._makeSound}>
+            <Text style={styles.btnText}>Press me!</Text>
+          </TouchableOpacity>
+          <TouchableOpacity 
+            style={styles.button}
+            onPress={this._makeSound}>
+            <Text style={styles.btnText}>Press me!</Text>
+          </TouchableOpacity>
+          <TouchableOpacity 
+            style={styles.button}
+            onPress={this._makeSound}>
+            <Text style={styles.btnText}>Press me!</Text>
+          </TouchableOpacity>
         </View>
       </ScrollView>
     );
@@ -38,9 +83,19 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
   },
   board: {
-
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
+    height: 200
   },
   button: {
-
+    backgroundColor: '#4468b0',
+    borderRadius: 6,
+    padding: 15,
+    margin: 5
+  },
+  btnText: {
+    color: '#fff',
+    fontSize: 16
   }
 });
