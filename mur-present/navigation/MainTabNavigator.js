@@ -7,6 +7,7 @@ import HomeScreen from '../screens/HomeScreen';
 import LinksScreen from '../screens/LinksScreen';
 import SettingsScreen from '../screens/SettingsScreen';
 import SoundsScreen from '../screens/SoundsScreen';
+import SightsScreen from '../screens/SightsScreen';
 
 const HomeStack = createStackNavigator({
   Home: HomeScreen,
@@ -68,8 +69,22 @@ SoundsStack.navigationOptions = {
   ),
 }
 
+const SightsStack = createStackNavigator({
+  Sights: SightsScreen
+});
+
+SightsStack.navigationOptions = {
+  tabBarLabel: 'Sights',
+  tabBarIcon: ({ focused }) => (
+    <TabBarIcon
+      focused={focused}
+      name={Platform.OS === 'ios' ? `ios-eye${focused ? '' : '-outline'}` : 'md-eye'}
+    />
+  )
+}
+
 export default createBottomTabNavigator({
   HomeStack,
-  SettingsStack,
+  SightsStack,
   SoundsStack
 });
