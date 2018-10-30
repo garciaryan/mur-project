@@ -11,11 +11,16 @@ import {
 export default class SoundsScreen extends React.Component {
   static navigationOptions = {
     title: 'Sounds',
+    headerStyle: { 
+      backgroundColor: '#EF946C',
+      borderBottomColor: '#EF946C',
+    },
+    headerTitleStyle: { color: '#fff' }
   };
 
   render() {
     return (
-      <ScrollView style={styles.container}>
+      <ScrollView style={styles.container} contentContainerStyle={styles.viewContainer}>
         <View style={styles.board}>
           <TouchableOpacity 
             style={styles.button}
@@ -77,10 +82,9 @@ export default class SoundsScreen extends React.Component {
 }
 
 const styles = StyleSheet.create({
-  container: {
+  viewContainer: {
+    backgroundColor: '#EF946C',
     flex: 1,
-    paddingTop: 15,
-    backgroundColor: '#fff',
   },
   board: {
     flexDirection: 'row',
@@ -89,7 +93,7 @@ const styles = StyleSheet.create({
     height: 200
   },
   button: {
-    backgroundColor: '#4468b0',
+    backgroundColor: '#604D53',
     borderRadius: 6,
     padding: 15,
     margin: 5
