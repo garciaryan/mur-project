@@ -7,6 +7,8 @@ import {
   TouchableOpacity,
   Text 
 } from 'react-native';
+import MyCarousel from '../components/Carousel';
+import Carousel from 'react-native-snap-carousel';
 
 export default class SightsScreen extends React.Component {
   static navigationOptions = {
@@ -15,7 +17,9 @@ export default class SightsScreen extends React.Component {
 
   render() {
     return (
-      <ScrollView style={styles.container}></ScrollView>
+      <ScrollView style={styles.container}>
+        <MyCarousel></MyCarousel>
+      </ScrollView>
     );
   }
 }

@@ -11,6 +11,7 @@ import SightsScreen from '../screens/SightsScreen';
 
 const HomeStack = createStackNavigator({
   Home: HomeScreen,
+  
 });
 
 HomeStack.navigationOptions = {

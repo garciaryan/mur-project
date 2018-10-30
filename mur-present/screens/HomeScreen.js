@@ -28,7 +28,7 @@ export default class HomeScreen extends React.Component {
             </ImageBackground>
             <View style={styles.textContainer}>
                 <Text style={styles.getStartedText}>
-                  Happy Anniversary, love.
+                  I love you so much.
                 </Text>
               </View>
           </View>
