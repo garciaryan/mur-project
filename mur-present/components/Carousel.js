@@ -44,6 +44,11 @@ export default class MyCarousel extends React.Component {
           title: 'Mur and Ry 2',
           subtitle: 'Us again!',
           pic: require('../assets/images/murandry2.jpg')
+        },
+        {
+          title: 'Mur and Ry 3',
+          subtitle: 'We 2 Nemos',
+          pic: require('../assets/images/murandry3.jpg')
         }
       ]
     };
