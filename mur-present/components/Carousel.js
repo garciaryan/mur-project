@@ -62,11 +62,11 @@ export default class MyCarousel extends React.Component {
         >
           <View style={styles.shadow} />
           <View style={[styles.imageContainer, even ? styles.imageContainerEven : {}]}>
-              { item.pic }
+              <Image style={styles.image} source={item.pic} />
               <View style={[styles.radiusMask, even ? styles.radiusMaskEven : {}]} />
           </View>
           <View style={[styles.textContainer, even ? styles.textContainerEven : {}]}>
-              { item.title }
+              <Text style={styles.title}>{ item.title }</Text>
               <Text
                 style={[styles.subtitle, even ? styles.subtitleEven : {}]}
                 numberOfLines={2}
@@ -152,7 +152,7 @@ const styles = StyleSheet.create({
       backgroundColor: '#000'
   },
   title: {
-      color: '#000',
+      color: '#fff',
       fontSize: 13,
       fontWeight: 'bold',
       letterSpacing: 0.5
