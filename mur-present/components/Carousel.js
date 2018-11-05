@@ -4,7 +4,7 @@ import {
   View, 
   Text, 
   StyleSheet, 
-  Image, 
+  ImageBackground, 
   Platform, 
   TouchableOpacity 
 } from 'react-native';
@@ -54,6 +54,16 @@ export default class MyCarousel extends React.Component {
           title: 'Mur and Ry 4',
           subtitle: 'Us!',
           pic: require('../assets/images/murandry4.jpg')
+        },
+        {
+          title: 'Mur and Ry 5',
+          subtitle: 'Hey!',
+          pic: require('../assets/images/murandry5.jpg'),
+        },
+        {
+          title: 'Mur and Ry 6',
+          subtitle: 'Hey!',
+          pic: require('../assets/images/murandry6.jpg'),
         }
       ]
     };
@@ -67,7 +77,8 @@ export default class MyCarousel extends React.Component {
         >
           <View style={styles.shadow} />
           <View style={[styles.imageContainer, even ? styles.imageContainerEven : {}]}>
-            {item.pic}
+            <ImageBackground source={item.pic} style={styles.image}>
+            </ImageBackground>
             <View style={[styles.radiusMask, even ? styles.radiusMaskEven : {}]} />
           </View>
           <View style={[styles.textContainer, even ? styles.textContainerEven : {}]}>
@@ -90,8 +101,6 @@ export default class MyCarousel extends React.Component {
             data={this.state.images}
             renderItem={this._renderItem}
             sliderWidth={sliderWidth}
-            sliderStyle={{ flex: 1 }}
-            containerCustomStyle={{flex: 1}}
             itemWidth={itemWidth}
           />
       );
@@ -102,7 +111,7 @@ const styles = StyleSheet.create({
   slideInnerContainer: {
     flex: 1,
     width: itemWidth,
-    height: slideHeight,
+    height: 500,
     paddingHorizontal: itemHorizontalMargin,
     paddingBottom: 18 // needed for shadow
   },
@@ -129,8 +138,10 @@ const styles = StyleSheet.create({
       backgroundColor: '#000'
   },
   image: {
-      ...StyleSheet.absoluteFillObject,
-      resizeMode: 'cover',
+      // ...StyleSheet.absoluteFillObject,
+      flex: 1,
+      height: '100%',
+      width: '100%',
       borderRadius: IS_IOS ? entryBorderRadius : 0,
       borderTopLeftRadius: entryBorderRadius,
       borderTopRightRadius: entryBorderRadius
