@@ -12,7 +12,7 @@ import Carousel from 'react-native-snap-carousel';
 
 export default class SightsScreen extends React.Component {
   static navigationOptions = {
-    title: 'Sights',
+    header: null
   };
 
   render() {
@@ -27,7 +27,7 @@ export default class SightsScreen extends React.Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    paddingTop: 15,
+    paddingTop: 150,
     backgroundColor: '#6A8D73',
   },
   board: {

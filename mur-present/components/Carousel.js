@@ -49,6 +49,11 @@ export default class MyCarousel extends React.Component {
           title: 'Mur and Ry 3',
           subtitle: 'We 2 Nemos',
           pic: require('../assets/images/murandry3.jpg')
+        },
+        {
+          title: 'Mur and Ry 4',
+          subtitle: 'Us!',
+          pic: require('../assets/images/murandry4.jpg')
         }
       ]
     };
@@ -62,8 +67,8 @@ export default class MyCarousel extends React.Component {
         >
           <View style={styles.shadow} />
           <View style={[styles.imageContainer, even ? styles.imageContainerEven : {}]}>
-              <Image style={styles.image} source={item.pic} />
-              <View style={[styles.radiusMask, even ? styles.radiusMaskEven : {}]} />
+            {item.pic}
+            <View style={[styles.radiusMask, even ? styles.radiusMaskEven : {}]} />
           </View>
           <View style={[styles.textContainer, even ? styles.textContainerEven : {}]}>
               <Text style={styles.title}>{ item.title }</Text>
@@ -85,6 +90,8 @@ export default class MyCarousel extends React.Component {
             data={this.state.images}
             renderItem={this._renderItem}
             sliderWidth={sliderWidth}
+            sliderStyle={{ flex: 1 }}
+            containerCustomStyle={{flex: 1}}
             itemWidth={itemWidth}
           />
       );
@@ -93,6 +100,7 @@ export default class MyCarousel extends React.Component {
 
 const styles = StyleSheet.create({
   slideInnerContainer: {
+    flex: 1,
     width: itemWidth,
     height: slideHeight,
     paddingHorizontal: itemHorizontalMargin,

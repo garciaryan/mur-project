@@ -71,7 +71,7 @@ SoundsStack.navigationOptions = {
 }
 
 const SightsStack = createStackNavigator({
-  Sights: SightsScreen
+  Sights: SightsScreen,
 });
 
 SightsStack.navigationOptions = {
