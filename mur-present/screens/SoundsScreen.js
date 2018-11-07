@@ -1,4 +1,6 @@
 import React from 'react';
+import Expo from 'expo';
+
 import { 
   Alert,
   ScrollView, 
@@ -17,6 +19,17 @@ export default class SoundsScreen extends React.Component {
     },
     headerTitleStyle: { color: '#fff' }
   };
+
+  constructor(){
+    super();
+    this.state = {
+      sounds: [
+        {
+          clip: require('../assets/sounds/she_kissed_him.m4a')
+        }
+      ]
+    };
+  }
 
   render() {
     return (
@@ -76,8 +89,20 @@ export default class SoundsScreen extends React.Component {
     );
   }
 
-  _makeSound(){
-    Alert.alert('hi!');
+  async _makeSound(){
+    const sound = new Expo.Audio.Sound();
+    let clip = this.state.sounds[0].clip; 
+    console.log(clip);
+    
+    try {
+      console.log(clip);
+      
+      await sound.loadAsync(clip)
+      await sound.playAsync();
+    }
+    catch (error) {
+      console.log(`ERROR: ${error}`);
+    }
   }
 }
 
