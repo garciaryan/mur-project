@@ -111,7 +111,7 @@ const styles = StyleSheet.create({
   slideInnerContainer: {
     flex: 1,
     width: itemWidth,
-    height: 500,
+    height: 570,
     paddingHorizontal: itemHorizontalMargin,
     paddingBottom: 18 // needed for shadow
   },

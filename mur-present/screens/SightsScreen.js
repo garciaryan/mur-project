@@ -27,7 +27,7 @@ export default class SightsScreen extends React.Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    paddingTop: 150,
+    paddingTop: 100,
     backgroundColor: '#6A8D73',
   },
   board: {
